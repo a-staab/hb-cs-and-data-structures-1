@@ -1,0 +1,67 @@
+Runtime
+
+1. When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+Assuming the box is full, the size of the box and, technically, the size of an individual cracker would determine the workload, as these determine how many crackers will be in the box.
+
+2. Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n2)
+O(2n)
+
+Stacks and Queues
+
+1. In the following cases, would a stack or queue be a more appropriate data structure?
+    1. The process of loading and unloading pallets onto a flatbed truck
+        STACK
+    2. Putting bottle caps on bottles of beer as they roll down an assembly line
+        QUEUE
+    3. Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+        STACK
+2. Describe two more situations where a queue would be an appropriate data structure.
+        Preparing meals in a restaurant kitchen in the order that customers placed their orders
+        Stitches placed on fabric as it is fed through a sewing machine
+3. Describe two more situations where a stack would be an appropriate data structure.
+        An "undo" command for a program
+        Displaying text messages on a smart phone (ordering from newest to oldest)
+
+Linked Lists
+
+Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+1. A node has two attributes: its data and its reference to the next node. So, in the diagram, the rectangles around "Apple" and 'next' beside it constitute a single node. We would simply say, though, that apple, berry, and cherry
+are the nodes. The strings "Apple", "Berry", and "Cherry" are, respectively, the data for these nodes. The apple node is the head, and the cherry node is the tail. The arrows are part of the next attribute of the node and the head attribute of the linked list--the reference to the next node and the head node, respectively. 
+
+2. What’s the difference between doubly- and singly-linked lists?
+    Nodes in a doubly-linked list have two references instead of just one: a reference to the node preceding it
+    in the list as well as (like in a linked list) the next node after it in the sequence.
+
+3. Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+    Appending adds an item to the end of a list. If we didn't track the tail of our linked list as an attribute,
+    we would have to "touch" every node in the list (checking its reference to see which node is next) every time we want to add an an item. This traversal would be O(n). If we've tracked the tail, though, appending is just O(1): we can go directly to the last node to add a new one.
+
+Trees
+
+1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+food, Italian, Indian, Mexican, lasagna, pizza, tikka masala, saag, burritos
+
+2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+If the algorithm is written as in our notes (using the pop method on a Python list), the depth-first search will
+proceed along the rightmost branch first, all the way to its leaves, before proceeding inward:
+
+food, Mexican, enchiladas, tacos, burritos, Indian, saag, tikka masala, Italian, pizza, Sicilian, New York-style, Chicago-style
+
+3. How is a binary search tree different from other trees?
+
+Each node can have, at most, two children (a left and a right one). And searching is fast: O(log n).
+
+
+
+
+
